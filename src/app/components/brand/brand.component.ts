@@ -9,6 +9,7 @@ import { BrandService } from 'src/app/services/brand.service';
 })
 export class BrandComponent {
   brands:GetBrandResponse[] = [];
+  currentBrand:GetBrandResponse;
   constructor(private brandService:BrandService){ }
 
   ngOnInit(): void {
@@ -21,4 +22,16 @@ export class BrandComponent {
     })
   }
 
+  setCurrentBrand(brand:GetBrandResponse){
+    this.currentBrand =brand;
+  }
+
+  getCurrentBrandClass(brand:GetBrandResponse){
+    if(brand==this.currentBrand){
+      return "list-group-item active"
+    }
+    else{
+      return "list-group-item"
+    }
+  }
 }

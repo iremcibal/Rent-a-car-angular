@@ -1,8 +1,8 @@
-<div *ngFor="let car of cars" class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
+<div *ngFor="let car of cars" class="card" style="width: 18rem;display:inline-flex;margin: 1rem;">
+    <img [src]="imgUrl + car.carImageImagePath" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">{{car.brandId}}{{car.name}}</h5>
-      <p class="card-text">{{car.modelYear}}</p><p class="card-text">{{car.dailyPrice}}</p>
+      <h5 class="card-title">{{car.brandName}}  {{car.name}}</h5>
+      <p class="card-text">Modeli:{{car.modelYear}}   Günlük Fiyatı:{{car.dailyPrice}}</p>
       <a href="#" class="btn btn-primary">İlanı Görüntüle</a>
     </div>
-  </div>
+</div>
