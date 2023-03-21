@@ -7,7 +7,8 @@ const routes: Routes = [
   {path:"", pathMatch:"full", component:CarComponent},
   {path:"Cars", component:CarComponent},
   {path:"Image",component:ImageComponent},
-  {path:"Cars/GetByBrandId/:brandId", component:CarComponent}
+  {path:"Cars/GetByBrandId/:brandId", component:CarComponent},
+  {path:"Cars/GetByColorId/:colorId",component:CarComponent}
   //{path:"panel", component:ApplicationComponent},
   //{path:"blacklist", component:BlacklistComponent}
 
